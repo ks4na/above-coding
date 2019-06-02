@@ -1,6 +1,12 @@
 # prettier
  [prettier](https://prettier.io/) 是一个代码格式化程序，保证所有输出的代码符合一致的风格。
 
+- [安装](#安装)
+- [创建配置文件](#创建配置文件)
+- [常用命令参数](#常用命令参数)
+- [运行prettier](#运行prettier)
+- [prettier忽略文件](#prettier忽略文件)
+
 ## 安装
 ```sh
 yarn add -D --exact prettier
@@ -22,10 +28,10 @@ module.exports = {
 ```
 
 ## 常用命令参数
-`--write` ：  
+`--write`  
 格式化所有处理的文件，并覆盖该文件。
 
-`--check`：  
+`--check`  
 检测指定的文件是否已格式化，如果有不符合的文件会将文件名输出在命令行。  
 
 ## 运行prettier

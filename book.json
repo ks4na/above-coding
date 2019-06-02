@@ -1,5 +1,5 @@
 {
-    "title": "over-coding",
+    "title": "above-coding",
     "author": "_yuusha",
     "description": "代码之外的一些总结",
     "language": "zh-hans",
@@ -46,7 +46,7 @@
             "showLevel" : false
         },
          "edit-link": {
-            "base": "https://github.com/ks4na/over-coding/edit/master",
+            "base": "https://github.com/ks4na/above-coding/edit/master",
             "label": "Edit This Page"
         }
     }

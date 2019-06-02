@@ -1,6 +1,13 @@
 # husky
 
-[husky](https://github.com/typicode/husky/blob/master/DOCS.md) 用于方便地设置Git hooks。  
+[husky](https://github.com/typicode/husky/blob/master/DOCS.md) 用于方便地设置Git hooks。 
+
+- [安装 huksy](#安装-huksy)
+- [配置](#配置)
+  - [在package.json中配置](#在packagejson中配置)
+  - [使用单独的 husky 配置文件](#使用单独的-husky-配置文件)
+- [husky同时运行多条命令](#husky同时运行多条命令)
+
 使用场景：
 - `git commit` 之前通过钩子函数，配合其它插件，做一些代码格式化、代码校验工作。
 
@@ -42,7 +49,7 @@ husky运行多条命令的方式类似 `package.json` 中的 `scripts` 中的写
   'pre-commit': 'echo 1 && echo 2 && echo 3'
 }
 ```
-为了命令的可读性，可以使用一个函数来拼接命令(所以推荐使用配置文件方式)：  
+为了命令的可读性，可以使用一个函数来拼接命令：  
 ```js
 // .huskyrc.js
 
