@@ -6,6 +6,7 @@
 - [常用命令参数](#常用命令参数)
 - [运行prettier](#运行prettier)
 - [prettier忽略文件](#prettier忽略文件)
+- [补充](#补充)
 
 ## 安装
 ```sh
@@ -46,5 +47,6 @@ npx prettier src/**/*.css --write
 ## prettier忽略文件
 可以创建 `.prettierignore` 文件来设置忽略文件列表，用法同 `.gitignore` 。
 
-> 尝试过使用 `eslint` 集成 `prettier:recommended` ，和自己习惯的配置不太相同，所以放弃。
+## 补充
+尝试过使用 `eslint` 集成 `prettier:recommended` ，和自己习惯的配置不太相同，所以放弃。不集成使用起来也没那么不方便。
 

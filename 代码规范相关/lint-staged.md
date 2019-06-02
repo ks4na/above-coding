@@ -6,6 +6,7 @@
 - [安装](#安装)
 - [配置](#配置)
   - [package.json中配置](#packagejson中配置)
+- [补充](#补充)
 
 ## 安装
 ```sh
@@ -31,3 +32,8 @@ yarn add -D lint-staged husky
 ```
 > `husky` 的 `pre-commit` 中直接调用 `lint-staged` 命令，  
 > `lint-staged` 针对 `.js` 和 `.css` 文件执行不同的命令，主要执行检查操作而不是自动修复操作，不通过则放弃本次提交并提示存在问题的文件。
+
+## 补充
+不必担心提交到git时有引用的库导致预检不通过的问题。  
+例如 `/src/lib/` 下存放所有手动下载的库，而 `/src/lib` 是需要 git 来管理的，提交时如何避免 `prettier` 和 `eslint` 对其中代码进行检测？
+解决方法是通过 `.prettierignore` 和 `.eslintignore` 来忽略 `/src/lib/` 。
