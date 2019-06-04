@@ -10,6 +10,11 @@
   - eslint
   - prettier
 
-
+TODOs:
+- 制作自己的nodejs工具包
+  - glob
+  - chalk
+  - commander
+  - npm publish 相关知识
 
 
