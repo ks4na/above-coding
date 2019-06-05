@@ -35,5 +35,5 @@ yarn add -D lint-staged husky
 
 ## 补充
 不必担心提交到git时有引用的库导致预检不通过的问题。  
-例如 `/src/lib/` 下存放所有手动下载的库，而 `/src/lib` 是需要 git 来管理的，提交时如何避免 `prettier` 和 `eslint` 对其中代码进行检测？
+例如 `/src/lib/` 下存放所有手动下载的库，而 `/src/lib` 是需要 git 来管理的，提交时如何避免 `prettier` 和 `eslint` 对其中代码进行检测？  
 解决方法是通过 `.prettierignore` 和 `.eslintignore` 来忽略 `/src/lib/` 。
