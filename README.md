@@ -11,7 +11,7 @@
   - prettier
 
 TODOs:
-- 制作自己的nodejs工具包
+- 制作nodejs工具包
   - glob
   - chalk
   - commander
