@@ -24,10 +24,10 @@ yarn add -D lint-staged husky
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "*.js": "prettier --check && eslint",
-    "*.css": "prettier --check"
-  }
+   "lint-staged": {
+    "*": "prettier --check",
+    "*.(js|jsx)": "eslint"
+  },
 }
 ```
 > `husky` 的 `pre-commit` 中直接调用 `lint-staged` 命令，  
