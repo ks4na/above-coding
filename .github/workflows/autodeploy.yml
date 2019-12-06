@@ -12,12 +12,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Init gitbook environment
-    - uses: actions/setup-node@v1
+      
+    - name: Init nodejs env
+      uses: actions/setup-node@v1
       with:
         node-version: '10'
-    - run: npm install gitbook-cli -g
-    - run: gitbook build
+
+    - name: Init gitbook env
+      run: |
+        npm install gitbook-cli -g
+        gitbook build
+      
     - name: Deploy to server
       id: deploy
       uses: Pendect/action-rsyncer@v1.1.0
@@ -29,5 +34,6 @@ jobs:
         ssh_options: ''
         src: '_book/'
         dest: 'yuusha@49.235.176.149:/above-coding'
+
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"
