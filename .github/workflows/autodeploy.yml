@@ -34,7 +34,7 @@ jobs:
         options: ''
         ssh_options: ''
         src: '_book/'
-        dest: 'yuusha@49.235.176.149:/above-coding'
+        dest: 'yuusha@49.235.176.149:./above-coding'
 
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"
