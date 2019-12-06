@@ -1,4 +1,4 @@
-name: CI
+name: Auto Deploy
 
 on: 
   push:
@@ -33,4 +33,4 @@ jobs:
         dest: 'yuusha@49.235.176.149:/above-coding'
 
     - name: Display status from deploy
-      run: echo deployResult"${{ steps.deploy.outputs.status }}"
+      run: echo "${{ steps.deploy.outputs.status }}"
