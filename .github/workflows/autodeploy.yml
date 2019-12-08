@@ -26,8 +26,10 @@ jobs:
         
     - name: Print github workspace top dirs
       env:
-        GITHUB_CONTEXT: ${{ toJSON(github) }}
-      run: echo '$GITHUB_CONTEXT'
+        GITHUB_WORKSPACE: ${{ GITHUB_WORKSPACE }}
+      run: |
+        cd GITHUB_WORKSPACE
+        ls
       
     - name: Deploy to server
       id: deploy
