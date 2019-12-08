@@ -25,10 +25,8 @@ jobs:
         gitbook build
         
     - name: Print github workspace top dirs
-      env:
-        GITHUB_WORKSPACE: ${{ GITHUB_WORKSPACE }}
       run: |
-        cd $GITHUB_WORKSPACE
+        cd ${{ GITHUB_WORKSPACE }}
         ls
       
     - name: Deploy to server
