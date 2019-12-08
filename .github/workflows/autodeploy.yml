@@ -23,14 +23,6 @@ jobs:
         npm install gitbook-cli -g
         gitbook install
         gitbook build
-        
-    - name: "Zip the target dir: _book/"
-      run: |
-        pwd
-        echo $GITHUB_WORKSPACE
-        cd $GITHUB_WORKSPACE
-        tar czvf zip.tar _book/
-        ls
       
     - name: Deploy to server
       id: deploy
