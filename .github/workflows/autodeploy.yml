@@ -26,9 +26,9 @@ jobs:
         
     - name: Print github workspace top dirs
       env: 
-        workspace: ${{ GITHUB_WORKSPACE }}
+        contents: ${{ GITHUB_WORKSPACE }}
       run: |
-        cd ${{ workspace }}
+        cd $contents
         ls
       
     - name: Deploy to server
