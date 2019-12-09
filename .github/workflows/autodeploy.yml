@@ -14,7 +14,7 @@ jobs:
       - name: Change default timezone
         run: |
           date -R
-          timedatectl set-timezone Asia/Shanghai
+          sudo timedatectl set-timezone Asia/Shanghai
           date -R
           
       - uses: actions/checkout@v1
