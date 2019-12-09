@@ -45,6 +45,18 @@ git rebase master
 在 `feat1` 分支上整合提交历史，将`feat1` 分支的最新提交(即：图中的 `feat1 add` 提交记录)成为 `master` 分支的直接下游，这样 `master` 分支合并 `feat1` 分支时可以快速合并，不会出现 "自动合并" 的提交记录，  
 并且这样还可以将解决冲突的责任转移给开发 `feat1` 的人，主分支只需要负责 `merge` ，如果 `merge` 有冲突就放弃本次 `merge` ,让 `feat1` 分支基于最新的 `master` 分支重新 `rebase` 之后再请求合并。  
 
+## 补充
+
+### 1.rebase之后如何恢复到之前的状态
+使用 `git rebase <分支名>` 之后，当前分支的历史就会变成<分支名>的历史，可以通过
+
+```sh
+git reflog <当前分支名>
+```  
+
+命令来找到当前分支曾经指向过的 `commit`，然后 `git reset --hard <commit-id>` 就可以恢复了。
+
+
 
 
 
