@@ -11,6 +11,7 @@
 - 代码规范相关
   - [eslint](代码规范相关/eslint.md)
   - [prettier](代码规范相关/prettier.md)
+  - [eslint 集成 typescript,react,prettier](代码规范相关/eslint集成ts,react,prettier.md)
   - [lint-staged](代码规范相关/lint-staged.md)
 - NPM 包制作相关
   - [chalk](制作nodejs工具包相关/chalk.md)
