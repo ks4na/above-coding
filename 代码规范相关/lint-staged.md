@@ -26,7 +26,7 @@ yarn add -D lint-staged husky
   },
    "lint-staged": {
     "*": "prettier --check",
-    "*.(js|jsx)": "eslint"
+    "src/**/*.{js,ts,tsx}": "eslint"
   },
 }
 ```
