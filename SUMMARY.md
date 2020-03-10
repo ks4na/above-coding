@@ -10,6 +10,7 @@
     - [cherry-pick](版本控制相关/git高级/cherry-pick.md)
 - 代码规范相关
   - [eslint](代码规范相关/eslint.md)
+  - [eslint-plugin-compat](代码规范相关/eslint-plugin-compat.md)
   - [prettier](代码规范相关/prettier.md)
   - [eslint 集成 typescript,react,prettier](代码规范相关/eslint集成ts,react,prettier.md)
   - [lint-staged](代码规范相关/lint-staged.md)
