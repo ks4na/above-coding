@@ -43,7 +43,7 @@
 
 大部分情况下, `browserslist` 指定为 `defaults` 即可(即：`> 0.5%, last 2 versions, Firefox ESR, not dead`)。
 
-> 使用 `stylelint-no-supported-browser-features` 插件时，必须设置上 `not op_mini all`，因为 `op_mini` 在 `caniuse` 上很多属性未知，导致有报错提示。
+> 使用 `stylelint-no-supported-browser-features` 插件时，必须设置上 `not op_mini all`，因为 `op_mini` 在 [caniuse](https://caniuse.com/) 上很多属性未知，导致有报错提示。
 
 ## 可用的查询语句
 
