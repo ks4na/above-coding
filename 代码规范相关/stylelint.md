@@ -7,6 +7,7 @@
   - [3.检测样式文件](#3%e6%a3%80%e6%b5%8b%e6%a0%b7%e5%bc%8f%e6%96%87%e4%bb%b6)
 - [忽略规则](#%e5%bf%bd%e7%95%a5%e8%a7%84%e5%88%99)
   - [1.忽略文件](#1%e5%bf%bd%e7%95%a5%e6%96%87%e4%bb%b6)
+  - [2.行内注释](#2%e8%a1%8c%e5%86%85%e6%b3%a8%e9%87%8a)
 - [添加 pre-commit 检查](#%e6%b7%bb%e5%8a%a0-pre-commit-%e6%a3%80%e6%9f%a5)
 - [集成 prettier](#%e9%9b%86%e6%88%90-prettier)
   - [安装依赖](#%e5%ae%89%e8%a3%85%e4%be%9d%e8%b5%96)
@@ -55,7 +56,7 @@ npx stylelint src/**/*.css
 类似于 `eslint` 的忽略方式， `stylelint` 也有两种忽略规则的方式：
 
 1. 忽略文件
-2. 注释方式
+2. 行内注释
 
 ### 1.忽略文件
 
@@ -67,6 +68,18 @@ npx stylelint src/**/*.css
 vendors/**/*.css
 
 src/ignore.css
+```
+
+### 2.行内注释
+
+类似于 `eslint` 行内注释的用法：
+
+```css
+/* stylelint-disable selector-no-id, declaration-no-important */
+#id {
+  color: pink !important;
+}
+/* stylelint-enable selector-no-id, declaration-no-important */
 ```
 
 ## 添加 pre-commit 检查
@@ -89,7 +102,7 @@ src/ignore.css
     "type-check": "tsc --noEmit",
     "eslint-check": "eslint ./src --ext .{js,jsx,ts,tsx}",
     "stylelint-check": "stylelint ./src",
-    "lint": "yarn run type-check && yarn run eslint-check"
+    "lint": "yarn run type-check && yarn run eslint-check && yarn run stylelint-check"
   }
 }
 ```
