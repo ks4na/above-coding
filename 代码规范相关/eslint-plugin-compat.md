@@ -61,16 +61,19 @@ eslint 插件，用来检查 js API 在目标浏览器上的兼容性。
    **.eslintrc.js**
 
    ```js
-   {
+   // 定义 compat 插件的 polyfills 声明
+   const compatPolyfills = [
+     // 添加 fetch 的 polyfill
+     'fetch',
+     // 添加 location.origin 属性的 polyfill
+     'location.origin',
+   ]
+
+   module.exports = {
      // ...
-     "settings": {
-       "polyfills": [
-         // 添加 fetch 的 polyfill
-         "fetch",
-         // 添加 location.origin 属性的 polyfill
-         "location.origin"
-       ]
-     }
+     settings: {
+       polyfills: compatPolyfills,
+     },
    }
    ```
 
