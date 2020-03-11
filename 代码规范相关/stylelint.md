@@ -8,6 +8,12 @@
 - [忽略规则](#%e5%bf%bd%e7%95%a5%e8%a7%84%e5%88%99)
   - [1.忽略文件](#1%e5%bf%bd%e7%95%a5%e6%96%87%e4%bb%b6)
 - [添加 pre-commit 检查](#%e6%b7%bb%e5%8a%a0-pre-commit-%e6%a3%80%e6%9f%a5)
+- [集成 prettier](#%e9%9b%86%e6%88%90-prettier)
+  - [安装依赖](#%e5%ae%89%e8%a3%85%e4%be%9d%e8%b5%96)
+  - [修改配置文件](#%e4%bf%ae%e6%94%b9%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6)
+- [补充：vscode 配置 stylelint](#%e8%a1%a5%e5%85%85vscode-%e9%85%8d%e7%bd%ae-stylelint)
+  - [安装 stylelint 插件](#%e5%ae%89%e8%a3%85-stylelint-%e6%8f%92%e4%bb%b6)
+  - [配置 stylelint 检查样式文件](#%e9%85%8d%e7%bd%ae-stylelint-%e6%a3%80%e6%9f%a5%e6%a0%b7%e5%bc%8f%e6%96%87%e4%bb%b6)
 
 ## 介绍
 
@@ -87,3 +93,36 @@ src/ignore.css
   }
 }
 ```
+
+## 集成 prettier
+
+### 安装依赖
+
+```sh
+yarn add -D stylelint-config-prettier stylelint-prettier
+```
+
+- stylelint-config-prettier: 禁用可能会与 prettier 冲突的规则
+- stylelint-prettier: 将 prettier 报错信息作为 stylelint 错误
+
+### 修改配置文件
+
+将 `"stylelint-prettier/recommended"` 添加到 extends 数组中，并确保放在最后一项。
+
+**.stylelintrc.js**
+
+```js
+module.exports = {
+  extends: ['stylelint-prettier/recommended'],
+}
+```
+
+## 补充：vscode 配置 stylelint
+
+### 安装 stylelint 插件
+
+搜索 `stylelint` 插件并下载
+
+### 配置 stylelint 检查样式文件
+
+到 vscode 的设置中禁用 `css/scss/less` 的检查，然后启用 `stylelint` 的检查。
