@@ -100,7 +100,7 @@ src/ignore.css
 {
   "scripts": {
     "type-check": "tsc --noEmit",
-    "eslint-check": "eslint ./src --ext .{js,jsx,ts,tsx}",
+    "eslint-check": "eslint . --ext .js,.jsx,.ts,.tsx",
     "stylelint-check": "stylelint ./src",
     "lint": "yarn run type-check && yarn run eslint-check && yarn run stylelint-check"
   }
