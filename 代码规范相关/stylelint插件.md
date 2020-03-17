@@ -16,7 +16,7 @@
 #### 1.安装
 
 ```sh
-yarn add -D stylelint-no-supported-browser-features
+yarn add -D stylelint-no-unsupported-browser-features
 ```
 
 #### 2.更新 stylelint 配置文件
