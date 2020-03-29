@@ -42,6 +42,9 @@ module.exports = {
 
 ```sh
 yarn add -D eslint-plugin-react
+
+# 使用 react hooks 时安装该插件
+yarn add eslint-plugin-react-hooks -D
 ```
 
 然后配置 `.eslintrc.js`:
@@ -52,9 +55,11 @@ module.exports = {
     browser: true,
     node: true
   },
+  plugins: ['react-hooks'], // 使用 react hooks 添加该 plugin
   parser: '@typescript-eslint/parser',
   extends: [
     'plugin:react/recommended', // 使用 eslint-plugin-react 推荐的规则
+    'plugin:react-hooks/recommended', // 使用 react hooks 推荐的规则
     'plugin:@typescript-eslint/recommended'
   ],
   parserOptions: {
