@@ -62,7 +62,7 @@ module.exports = {
 
 ### 3.检查插件效果
 
-`browserslist` 中包含 `IE 11` 的情况下，书写 `IE 11` 需要加前缀的属性，例如 `display: flex;`， 然后打开 `IE 11` 查看效果：
+`browserslist` 中包含 `IE 10` 的情况下，书写 `IE 10` 需要加前缀的属性，例如 `display: flex;`， 然后打开 `IE 10` 查看效果：
 
 ![autoprefixer](media/autoprefixer.png)
 
