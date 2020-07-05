@@ -30,10 +30,16 @@ jobs:
           gitbook build
 
       - name: Deploy to server
-        uses: easingthemes/ssh-deploy@v2.0.7
+        id: deploy
+        uses: Pendect/action-rsyncer@v1.1.0
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY_CLOUDCONE }}
-          SOURCE: '_book/'
-          REMOTE_HOST: ${{ secrets.HOST_CLOUDCONE }}
-          REMOTE_USER: ${{ secrets.USER_CLOUDCONE }}
-          TARGET: '~/gitbook-repo/above-coding'
+          DEPLOY_KEY: ${{secrets.TENCENTCLOUD_DEPLOY_KEY}}
+        with:
+          flags: '-avzr --delete'
+          options: ''
+          ssh_options: ''
+          src: '_book/'
+          dest: '${{secrets.TENCENTCLOUD_USER}}@${{secrets.TENCENTCLOUD_HOST}}:./gitbook-repo/above-coding'
+
+      - name: Display status from deploy
+        run: echo "${{ steps.deploy.outputs.status }}"
