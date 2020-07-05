@@ -1,13 +1,12 @@
 name: Auto Deploy
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +15,7 @@ jobs:
           date -R
           sudo timedatectl set-timezone Asia/Shanghai
           date -R
-          
+
       - uses: actions/checkout@v1
 
       - name: Init nodejs env
@@ -24,23 +23,17 @@ jobs:
         with:
           node-version: '10'
 
-      - name: Init gitbook env 
+      - name: Init gitbook env
         run: |
           npm install gitbook-cli -g
           gitbook install
           gitbook build
 
       - name: Deploy to server
-        id: deploy
-        uses: Pendect/action-rsyncer@v1.1.0
+        uses: easingthemes/ssh-deploy@v2.0.7
         env:
-          DEPLOY_KEY: ${{secrets.DEPLOY_KEY_CLOUDCONE}}
-        with:
-          flags: '-avzr --delete'
-          options: ''
-          ssh_options: ''
-          src: '_book/'
-          dest: '${{secrets.USER_CLOUDCONE}}@${{secrets.HOST_CLOUDCONE}}:./gitbook-repo/above-coding'
-
-      - name: Display status from deploy
-        run: echo "${{ steps.deploy.outputs.status }}"
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY_CLOUDCONE }}
+          SOURCE: '_book/'
+          REMOTE_HOST: ${{ secrets.HOST_CLOUDCONE }}
+          REMOTE_USER: ${{ secrets.USER_CLOUDCONE }}
+          TARGET: '~/gitbook-repo/above-coding'
