@@ -8,6 +8,7 @@
     - [filter-branch](版本控制相关/git高级/filter-branch.md)
     - [rebase](版本控制相关/git高级/rebase.md)
     - [cherry-pick](版本控制相关/git高级/cherry-pick.md)
+    - [git 多平台换行符设置](版本控制相关/git高级/git-eol-config.md)
 - 代码规范相关
   - [eslint](代码规范相关/eslint.md)
   - [eslint-plugin-compat](代码规范相关/eslint-plugin-compat.md)
