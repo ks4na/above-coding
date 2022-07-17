@@ -50,6 +50,14 @@ npm install --save-dev @commitlint/config-conventional @commitlint/cli
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
 
+安装 husky（如已安装则跳过）
+
+```sh
+npm i husky -D
+
+npx husky install
+```
+
 添加 husky 的 hook
 
 ```sh
