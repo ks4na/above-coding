@@ -4,11 +4,13 @@
 - 版本控制相关
   - [git](版本控制相关/git.md)
   - [husky](版本控制相关/husky.md)
+  - [gitcommit 提交信息规范化](版本控制相关/gitcommit提交信息规范化.md)
   - git 高级
     - [filter-branch](版本控制相关/git高级/filter-branch.md)
     - [rebase](版本控制相关/git高级/rebase.md)
     - [cherry-pick](版本控制相关/git高级/cherry-pick.md)
     - [git 多平台换行符设置](版本控制相关/git高级/git-eol-config.md)
+    - [gitattributes 介绍](版本控制相关/git高级/gitattributes介绍.md)
 - 代码规范相关
   - [eslint](代码规范相关/eslint.md)
   - [eslint-plugin-compat](代码规范相关/eslint-plugin-compat.md)
