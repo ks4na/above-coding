@@ -7,6 +7,7 @@
   - [eol](#eol)
 - [示例配置](#示例配置)
   - [常见配置方式](#常见配置方式)
+- [参考](#参考)
 
 ## 背景
 
@@ -75,3 +76,9 @@ pattern attr1 attr2 ...
 ```
 *	        text=auto
 ```
+
+## 参考
+
+- [.gitattributes 官方文档](https://git-scm.com/docs/gitattributes)
+- [github handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings#per-repository-settings)
+- [.gitattributes 作用详细讲解](https://juejin.cn/post/7120037275521515528)
