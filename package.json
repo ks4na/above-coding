@@ -1,0 +1,25 @@
+{
+  "name": "above-coding",
+  "version": "1.0.0",
+  "description": "这份笔记用来记录一些与提高代码水平关系不太大，但是却非常重要的一些东西，包括版本控制、代码风格检查、代码测试等。",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ks4na/above-coding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ks4na/above-coding/issues"
+  },
+  "homepage": "https://github.com/ks4na/above-coding#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "husky": "^8.0.1"
+  }
+}
