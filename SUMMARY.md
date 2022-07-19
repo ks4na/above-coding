@@ -1,6 +1,7 @@
 # Summary
 
 - [前言](README.md)
+- [文档更新历史](CHANGELOG.md)
 - 版本控制相关
   - [git](版本控制相关/git.md)
   - [husky](版本控制相关/husky.md)
