@@ -209,6 +209,26 @@ yarn add -D @commitlint/cz-commitlint commitizen inquirer@8             # inquir
 module.exports = {
   // ...
 
+  // 自定义有哪些 type
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'build',
+        'chore',
+        'ci',
+        // 'docs',
+        'feat',
+        'fix',
+        // 'perf',
+        'refactor',
+        'revert',
+        'style',
+        // 'test',
+      ],
+    ],
+  },
   prompt: {
     settings: {},
     messages: {
@@ -222,6 +242,8 @@ module.exports = {
     questions: {
       type: {
         description: "Select the type of change that you're committing:",
+        // 对上面的自定义 rules 进行信息配置
+        // 询问选择信息中 type 的展示顺序将按照这里出现的顺序
         enum: {
           feat: {
             description: 'A new feature',
