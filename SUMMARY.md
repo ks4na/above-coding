@@ -15,6 +15,7 @@
 - 版本发布相关
   - 自动化发布工具
     - [standard-version](版本发布相关/自动化发布工具/01.standard-version.md)
+    - [semantic-release](版本发布相关/自动化发布工具/02.semantic-release.md)
 - 代码规范相关
   - [eslint](代码规范相关/eslint.md)
   - [eslint-plugin-compat](代码规范相关/eslint-plugin-compat.md)
