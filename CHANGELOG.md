@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ks4na/above-coding/compare/v1.0.0...v1.1.0) (2022-12-01)
+
+
+### :sparkles: Features
+
+* semantic-release 添加 release workflow 简介和超链接 ([fbc8e7b](https://github.com/ks4na/above-coding/commit/fbc8e7bcd1970eab369ec567bb6e60566fb84bb3))
+* 添加 "semantic-release 使用方式" 笔记 ([c772dc4](https://github.com/ks4na/above-coding/commit/c772dc4a01e0dfe4343da9d0382962d45748ef94))
+* 添加 corepack 使用文档 ([b5c6ac1](https://github.com/ks4na/above-coding/commit/b5c6ac1b3718617781f938e15c87ec9ae3e40486))
+
 ## 1.0.0 (2022-07-19)
 
 
