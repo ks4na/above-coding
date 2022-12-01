@@ -1,6 +1,6 @@
 {
   "name": "above-coding",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "这份笔记用来记录一些与提高代码水平关系不太大，但是却非常重要的一些东西，包括版本控制、代码风格检查、代码测试等。",
   "main": "commitlint.config.js",
   "scripts": {

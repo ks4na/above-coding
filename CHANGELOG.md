@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ks4na/above-coding/compare/v1.1.0...v1.2.0) (2022-12-01)
+
+
+### :sparkles: Features
+
+* 更新 corepack 笔记 ([082bac6](https://github.com/ks4na/above-coding/commit/082bac6bacca95e6d8ce0a83857703fda250df59))
+
 ## [1.1.0](https://github.com/ks4na/above-coding/compare/v1.0.0...v1.1.0) (2022-12-01)
 
 
