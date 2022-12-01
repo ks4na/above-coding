@@ -6,6 +6,10 @@
   - [corepack 优势](#corepack-优势)
     - [1.自带 yarn 和 pnpm，节省安装时间](#1自带-yarn-和-pnpm节省安装时间)
     - [2.避免包管理器混用](#2避免包管理器混用)
+- [其他 corepack 命令](#其他-corepack-命令)
+  - [1.启停用 corepack](#1启停用-corepack)
+  - [2.使用指定版本的包管理器](#2使用指定版本的包管理器)
+  - [3.生产环境离线使用](#3生产环境离线使用)
 - [参考](#参考)
 
 <style>
@@ -81,6 +85,71 @@ corepack enable npm
 ```
 
 > 包管理器版本与 `packageManager` 中指定的版本不匹配时，会静默下载匹配的版本并使用该版本。
+
+## 其他 corepack 命令
+
+### 1.启停用 corepack
+
+启用 corepack：
+
+```sh
+# 启用
+corepack enable
+# 启用对于 npm 的管理
+corepack enable npm
+
+```
+
+停用 corepack：
+
+```sh
+# 停用
+corepack disable
+# 停用对于 npm 的管理
+corepack disable npm
+```
+
+### 2.使用指定版本的包管理器
+
+例如想要使用 `pnpm@7.4.0` 版本替代 `packageManager` 指定的 `7.3.0` 版本，可以这样写：
+
+```sh
+corepack prepare pnpm@7.4.0 --activate
+```
+
+其中 `prepare` 代表下载该版本的包管理器， `--activate` 代表使用该版本的包管理器并设置为默认。
+
+### 3.生产环境离线使用
+
+生产环境如果没有外网访问权限，可以先在外网机器上打包指定版本的包管理器到指定路径。命令如下：
+
+```sh
+corepack prepare [...name@version] --output=<path/to/corepack.tgz>
+```
+
+例如，下载 `pnpm@7.4.0` 版本到 `/tmp/corepack-pnpm.7.4.0.tar.gz`：
+
+```sh
+corepack prepare pnpm@7.4.0 --output=/tmp/corepack-pnpm.7.4.0.tar.gz
+```
+
+运行命令后将会在 `/tmp` 目录下生成 `corepack-pnpm.7.4.0.tar.gz` 文件，将该文件复制到离线环境中供使用。
+
+> 该命令支持同时打包多个包管理器或版本，例如： `corepack prepare pnpm@7.4.0 pnpm@7.3.0 yarn@1.22.0 --output=<path/to/corepack.tgz>`，或者直接指定 `--all` 参数将当前使用的 `npm/yarn/pnpm` 版本打包。
+
+离线环境使用以下命令来安装：
+
+```sh
+corepack hydrate <path/to/corepack.tgz>
+```
+
+例如，安装 `/tmp/corepack-pnpm.7.4.0.tar.gz`：
+
+```sh
+corepack hydrate /tmp/corepack-pnpm.7.4.0.tar.gz
+```
+
+如果想要安装后设置默认使用该版本，可以加上 `--activate` 参数。
 
 ## 参考
 
