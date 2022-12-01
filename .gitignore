@@ -1,3 +1,5 @@
 /node_modules
 /_book
 yarn.lock
+
+.DS_Store
