@@ -24,6 +24,8 @@
   - [lint-staged](代码规范相关/lint-staged.md)
   - [stylelint](代码规范相关/stylelint.md)
   - [stylelint 插件](代码规范相关/stylelint插件.md)
+- 开发环境相关
+  - [corepack 管理包管理器](开发环境相关/corepack管理包管理器.md)
 - 浏览器兼容性相关
   - [browserslist](浏览器兼容性相关/browserslist.md)
   - [autoprefixer](浏览器兼容性相关/autoprefixer.md)
