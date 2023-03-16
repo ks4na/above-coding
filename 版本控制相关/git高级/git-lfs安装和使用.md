@@ -1,5 +1,7 @@
 # git-lfs 安装和使用
 
+> 为了避免不再使用 git lfs 时会遇到的卸载相关的麻烦，可以选择不使用 git lfs。只依赖 git，解决仓库体积过大拉取的效率问题可以通过 partial clone 等方式避免。
+
 ## git lfs 简介
 
 `git lfs` 是用来管理 `git` 仓库中大文件的命令行插件。
