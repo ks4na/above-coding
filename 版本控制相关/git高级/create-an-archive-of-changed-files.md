@@ -29,17 +29,17 @@ git diff --name-only --diff-filter=d HEAD^
 最终两个命令组合起来就可以实现导出当前提交与上次提交之间变更过（新建或修改，不包含删除）的文件。
 
 ```sh
-git archive -o xxx.zip HEAD $(git diff --name-only HEAD^)
+git archive -o xxx.zip HEAD $(git diff --name-only --diff-filter=d HEAD^)
 ```
 
-> 注意：两个提交之间不能只包含删除文件而没有新增或修改的文件，否则导出内容是有问题的。
+> 注意：两个提交之间不能只包含删除文件而没有新增或修改的文件，否则 `$(git diff --name-only --diff-filter=d HEAD^)` 命令输出为空，导致实际运行的命令是 `git archive -o xxx.zip HEAD` ，错误地导出当前仓库所有文件。
 
 ## 导出指定的两个提交间的变更文件
 
 上述命令能够导出最新提交和它上一次提交之间的变更文件，如果想要导出指定的某两个提交(`(commitId1， commitId2]`，前开后闭区间且 `commitId1` 早于 `commitId2` )间的变更文件，需要对上面的命令作微调：
 
 ```sh
-git archive -o xxx.zip commitId2 $(git diff --name-only commitId1..commitId2)
+git archive -o xxx.zip commitId2 $(git diff --name-only --diff-filter=d commitId1..commitId2)
 ```
 
 > 说明：  
