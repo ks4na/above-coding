@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/ks4na/above-coding/compare/v1.2.0...v1.3.0) (2023-03-30)
+
+
+### :sparkles: Features
+
+* 添加文档：导出变更过的文件 ([d33e363](https://github.com/ks4na/above-coding/commit/d33e363e1849199106e190ffb028e37153139a99))
+
 ## [1.2.0](https://github.com/ks4na/above-coding/compare/v1.1.0...v1.2.0) (2022-12-01)
 
 
