@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/ks4na/above-coding/compare/v1.3.0...v1.3.1) (2023-03-30)
+
+
+### :bug: Bug Fixes
+
+* 优化： git 导出修改文件笔记 ([2a0d897](https://github.com/ks4na/above-coding/commit/2a0d89771a475a20d1272f1e9b67a1ac10d1778b))
+
 ## [1.3.0](https://github.com/ks4na/above-coding/compare/v1.2.0...v1.3.0) (2023-03-30)
 
 
