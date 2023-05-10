@@ -14,6 +14,7 @@
     - [gitattributes 介绍](版本控制相关/git高级/gitattributes介绍.md)
     - [git-lfs安装和使用](版本控制相关/git高级/git-lfs安装和使用.md)
     - [git 导出特定提交记录变更过的文件](版本控制相关/git高级/create-an-archive-of-changed-files.md)
+    - [git worktree 多分支并行开发](版本控制相关/git高级/git-worktree.md)
 - 版本发布相关
   - 自动化发布工具
     - [standard-version](版本发布相关/自动化发布工具/01.standard-version.md)
