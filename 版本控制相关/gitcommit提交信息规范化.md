@@ -61,18 +61,7 @@ npx husky install
 添加 husky 的 hook
 
 ```sh
-cat <<EEE > .husky/commit-msg
-#!/bin/sh
-. "\$(dirname "\$0")/_/husky.sh"
-
-npx --no -- commitlint --edit "\${1}"
-EEE
-```
-
-将其设置为可执行：
-
-```sh
-chmod a+x .husky/commit-msg
+npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'
 ```
 
 配置成功后，如果提交信息不符合指定的规范（上面安装的 `@commitlint/config-conventional` 规范），将会提示以下错误阻止提交：
