@@ -1,6 +1,8 @@
 # husky
 
-> **DEPRECATED** 本笔记已经过时，参考[husky](https://github.com/typicode/husky/) 官网最新配置方式。
+> **DEPRECATED** 本笔记已经过时，参考[husky](https://github.com/typicode/husky/) 官网最新配置方式。  
+> **DEPRECATED** 本笔记已经过时，参考[husky](https://github.com/typicode/husky/) 官网最新配置方式。  
+> **DEPRECATED** 本笔记已经过时，参考[husky](https://github.com/typicode/husky/) 官网最新配置方式。  
 
 [husky](https://github.com/typicode/husky/blob/master/DOCS.md) 用于方便地设置Git hooks。 
 
