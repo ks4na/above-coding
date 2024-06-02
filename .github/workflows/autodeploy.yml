@@ -33,13 +33,13 @@ jobs:
         id: deploy
         uses: Pendect/action-rsyncer@v1.1.0
         env:
-          DEPLOY_KEY: ${{secrets.DEPLOY_KEY_CLOUDCONE}}
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY_RAKSMART}}
         with:
-          flags: '-avzr --delete -c'
+          flags: '-avz --delete'
           options: ''
           ssh_options: ''
           src: '_book/'
-          dest: '${{secrets.USER_CLOUDCONE}}@${{secrets.HOST_CLOUDCONE}}:./gitbook-repo/above-coding'
+          dest: '${{secrets.USER_RAKSMART}}@${{secrets.HOST_RAKSMART}}:${{secrets.DEST_DIR}}'
 
       - name: Display status from deploy
         run: echo "${{ steps.deploy.outputs.status }}"
