@@ -37,7 +37,7 @@ jobs:
         with:
           flags: '-avz --delete'
           options: ''
-          ssh_options: ''
+          ssh_options: '-p ${{ secrets.PORT_RAKSMART }}'
           src: '_book/'
           dest: '${{secrets.USER_RAKSMART}}@${{secrets.HOST_RAKSMART}}:${{secrets.DEST_DIR}}'
 
